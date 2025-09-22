@@ -23,6 +23,79 @@ RuoYi-Vue3-FastAPI是一套全部开源的快速开发平台，毫无保留给�
 * 支持加载动态权限菜单，多方式轻松权限控制。
 * **🎨 已完成黑色主题改造**：参考[即梦AI](https://jimeng.jianying.com/ai-tool/home)设计风格，实现了现代化的深色主题界面。
 
+## 🚀 新增项目：RuoYi ShadCN Admin
+
+本项目新增了基于 **Next.js 15 + ShadCN/UI + TypeScript** 构建的现代化管理系统前端 `ruoyi-shadcn-admin`，采用最新的 React 18 技术栈和组件化设计理念。
+
+### 🌟 项目特色
+
+- **现代化技术栈**: Next.js 15 + React 18 + TypeScript + Tailwind CSS
+- **优雅的UI组件**: 基于 ShadCN/UI 构建，提供一致的设计语言
+- **完整的管理功能**: 用户管理、角色管理、菜单管理、部门管理等核心功能
+- **系统监控**: 实时监控服务器状态、在线用户、操作日志
+- **开发工具**: 代码生成器、系统工具等提升开发效率
+- **响应式设计**: 完美适配桌面端和移动端
+- **主题切换**: 支持明暗主题切换
+- **类型安全**: 完整的 TypeScript 类型定义
+
+### 🔧 核心功能
+
+#### 系统管理
+- **用户管理**: 完整的用户增删改查功能，支持用户状态管理和角色分配
+- **角色管理**: 角色权限配置，支持按权限类别分组显示
+- **菜单管理**: 树形结构菜单管理，支持目录、菜单、按钮三种类型
+- **部门管理**: 多层级部门结构管理，支持部门层级关系配置
+
+#### 系统监控
+- **操作日志**: 完整的操作日志记录和查询，支持批量操作和状态筛选
+- **登录日志**: 用户登录记录监控，支持登录状态筛选和详情查看
+- **服务器监控**: 实时监控CPU、内存、磁盘、网络等系统性能指标
+- **在线用户**: 当前系统活跃用户状态监控
+
+#### 开发工具
+- **系统接口**: 集成Swagger UI、ReDoc和OpenAPI JSON多种API文档格式
+- **代码生成**: 支持数据库表信息一键生成前后端代码
+- **通知公告**: 支持多种通知类型和状态管理
+
+### 🛠️ 技术架构
+
+- **前端框架**: Next.js 15 (App Router)
+- **UI组件库**: ShadCN/UI + Radix UI
+- **样式方案**: Tailwind CSS
+- **状态管理**: React Context + Hooks
+- **类型检查**: TypeScript
+- **代码规范**: ESLint + Prettier
+- **构建工具**: Turbopack (开发) / Webpack (生产)
+
+### 📁 项目结构
+
+```
+ruoyi-shadcn-admin/
+├── app/                    # Next.js App Router 页面
+├── components/             # 可复用组件
+├── lib/                   # 工具函数和配置
+├── hooks/                 # 自定义 React Hooks
+├── types/                 # TypeScript 类型定义
+├── public/                # 静态资源
+└── styles/                # 全局样式
+```
+
+### 🚀 快速开始
+
+```bash
+# 进入 ShadCN Admin 目录
+cd ruoyi-shadcn-admin
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 访问地址
+http://localhost:3000
+```
+
 ## 🌙 黑色主题特性
 
 本项目已完成全面的黑色主题改造，具备以下特性：
@@ -202,6 +275,8 @@ cd RuoYi-Vue3-FastAPI
 ```
 
 #### 前端
+
+##### Vue3 前端 (ruoyi-fastapi-frontend)
 ```bash
 # 进入前端目录
 cd ruoyi-fastapi-frontend
@@ -214,6 +289,24 @@ npm install --registry=https://registry.npmmirror.com
 
 # 启动服务
 npm run dev 或 yarn dev
+```
+
+##### ShadCN Admin 前端 (ruoyi-shadcn-admin)
+```bash
+# 进入 ShadCN Admin 目录
+cd ruoyi-shadcn-admin
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+
+# 启动生产服务器
+npm start
 ```
 
 #### 后端
@@ -244,18 +337,37 @@ python3 app.py --env=dev
 密码：admin123
 
 # 浏览器访问
-地址：http://localhost:80
+Vue3 前端地址：http://localhost:80
+ShadCN Admin 前端地址：http://localhost:3000
+后端API地址：http://localhost:9099
 ```
 
 ### 发布
 
 #### 前端
+
+##### Vue3 前端构建
 ```bash
+# 进入 Vue3 前端目录
+cd ruoyi-fastapi-frontend
+
 # 构建测试环境
 npm run build:stage 或 yarn build:stage
 
 # 构建生产环境
 npm run build:prod 或 yarn build:prod
+```
+
+##### ShadCN Admin 前端构建
+```bash
+# 进入 ShadCN Admin 目录
+cd ruoyi-shadcn-admin
+
+# 构建生产环境
+npm run build
+
+# 启动生产服务器
+npm start
 ```
 
 #### 后端
@@ -266,15 +378,3 @@ npm run build:prod 或 yarn build:prod
 # 运行后端
 python3 app.py --env=prod
 ```
-
-## 交流与赞助
-如果有对本项目及FastAPI感兴趣的朋友，欢迎加入知识星球一起交流学习，让我们一起变得更强。如果你觉得这个项目帮助到了你，你可以请作者喝杯咖啡表示鼓励☕。扫描下面微信二维码添加微信备注VF-Admin即可进群。
-<table>
-    <tr>
-        <td><img alt="zsxq" src="https://gitee.com/insistence2022/RuoYi-Vue-FastAPI/raw/master/demo-pictures/zsxq.jpg"></td>
-        <td><img alt="zanzhu" src="https://gitee.com/insistence2022/RuoYi-Vue-FastAPI/raw/master/demo-pictures/zanzhu.jpg"></td>
-    </tr>
-    <tr>
-        <td><img alt="wxcode" src="https://gitee.com/insistence2022/RuoYi-Vue-FastAPI/raw/master/demo-pictures/wxcode.jpg"></td>
-    </tr>
-</table>
